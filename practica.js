@@ -21,6 +21,6 @@ function getAverage(nameToLook) {
   }
 }
 
-let test1 = document.getElementById("name").value;
-let test2 = 0;
-console.log(test1);
+//quiero meter el valor del input que tiene id="name" dentro de ésta variable
+let test1 = document.getElementById("name").value; 
+
