@@ -1,26 +1,43 @@
+let mainStore=[];
 
-
-
-let students = []; //store info
-
-//Push new objects into array
-function pusher(nameCall,gradesCall) {
-  return students.push({name:nameCall,grades:gradesCall})
+function store(){
+  mainStore.push({
+    name: document.getElementById("nameToLog").value,
+    grades: 
+    [
+      parseInt(document.getElementById("gradeOne").value),
+      parseInt(document.getElementById("gradeTwo").value),
+      parseInt(document.getElementById("gradeThree").value),
+      parseInt(document.getElementById("gradeFour").value),
+      parseInt(document.getElementById("gradeFive").value)
+    ]
+  })
+  let text = document.createTextNode(`Calificaciones de ${document.getElementById("nameToLog").value} registradas`);
+  let p = document.createElement("p");
+  p.appendChild(text);
+  let div = document.getElementById("Box");
+  div.appendChild(p);
 }
 
-function getAverage(nameToLook) {
-  for (let index = 0; index < students.length; index++) {
-    if(students[index].name===nameToLook){
-      let average = students[index].grades.reduce((accumulator, current)=>accumulator+current)/students[index].grades.length;
+function getAverage() {
+  for (let index = 0; index < mainStore.length; index++) {
+    if(mainStore[index].name===document.getElementById("nameToGet").value){
+      let average = mainStore[index].grades.reduce((accumulator, current)=>accumulator+current)/mainStore[index].grades.length;
       if (average<7){
-        return `Reprobó con ${average} por burro`
+        let text = document.createTextNode(`Reprobó con ${average} por burro`);
+        let p = document.createElement("p");
+        p.appendChild(text);
+        let div = document.getElementById("Box2");
+        div.appendChild(p); 
       }else{
-        return average;
+        let text = document.createTextNode(average);
+        let p = document.createElement("p");
+        p.appendChild(text);
+        let div = document.getElementById("Box2");
+        div.appendChild(p); 
       }
     }    
   }
 }
 
-//quiero meter el valor del input que tiene id="name" dentro de ésta variable
-let test1 = document.getElementById("name").value; 
 
