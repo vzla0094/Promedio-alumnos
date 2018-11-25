@@ -1,49 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-</head>
-<body>
-  <div>
-    <h2>Registre calificaciones aquí</h2>
-    <div id="Box">
-      <form>
-        <label>Pon el nombre del alumno</label>
-        <input id="nameToLog" type="text"><br>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+  </head>
 
-        <label>Calificación primer parcial</label>
-        <input id="gradeOne" type="number"><br>
+  <body>
+    <div id="mainBox">
+      <div class="innerBoxes" id="Box">
+        <h2>Log students grades here</h2>
+        <div>
+          <form>
+            <label class="left">Student name</label>
+            <input id="nameToLog" class="right" type="text"><br>
 
-        <label>Calificación segundo parcial</label>
-        <input id="gradeTwo" type="number"><br>
+            <label class="left">Grade 1</label>
+            <input id="gradeOne" class="right" type="number"><br>
 
-        <label>Calificación tercer parcial</label>
-        <input id="gradeThree" type="number"><br>
+            <label class="left">Grade 2</label>
+            <input id="gradeTwo" class="right" type="number"><br>
 
-        <label>Calificación cuarto parcial</label>
-        <input id="gradeFour" type="number"><br>
+            <label class="left">Grade 3</label>
+            <input id="gradeThree" class="right" type="number"><br>
 
-        <label>Calificación quinto parcial</label>
-        <input id="gradeFive" type="number"><br>
+            <label class="left">Grade 4</label>
+            <input id="gradeFour" class="right" type="number"><br>
 
-        <input id="sendButton" onclick="store()" type="button" value="send">
-      </form>
+            <label class="left">Grade 5</label>
+            <input id="gradeFive" class="right" type="number"><br>
+
+            <input id="sendButton" class="callToAction" onclick="store()" type="button" value="send">
+          </form>
+        </div>
+      </div>
+
+      <div class="innerBoxes" id="Box2">
+        <h2>Average query</h2>
+        <form>
+          <label class="left">Student name</label>
+          <input id="nameToGet" class="right" type="text"><br>
+
+          <input id="getButton" class="callToAction" onclick="getAverage()" type="button" value="get">
+        </form>
+      </div>
     </div>
-  </div>
-
-  <div id="Box2">
-    <h2>Consulta de promedio</h2>
-    <form>
-      <label>Nombre del alumno</label>
-      <input id="nameToGet" type="text"><br>
-
-      <input id="getButton" onclick="getAverage()" type="button" value="Calcula promedio">
-    </form>
-  </div>
-
-  <script src=practica.js></script>
-</body>
+    <script src=practica.js></script>
+  </body>
 </html>
