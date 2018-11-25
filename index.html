@@ -7,24 +7,43 @@
   <title>Document</title>
 </head>
 <body>
-    
-  <div id="Box">
+  <div>
+    <h2>Registre calificaciones aquí</h2>
+    <div id="Box">
+      <form>
+        <label>Pon el nombre del alumno</label>
+        <input id="nameToLog" type="text"><br>
+
+        <label>Calificación primer parcial</label>
+        <input id="gradeOne" type="number"><br>
+
+        <label>Calificación segundo parcial</label>
+        <input id="gradeTwo" type="number"><br>
+
+        <label>Calificación tercer parcial</label>
+        <input id="gradeThree" type="number"><br>
+
+        <label>Calificación cuarto parcial</label>
+        <input id="gradeFour" type="number"><br>
+
+        <label>Calificación quinto parcial</label>
+        <input id="gradeFive" type="number"><br>
+
+        <input id="sendButton" onclick="store()" type="button" value="send">
+      </form>
+    </div>
+  </div>
+
+  <div id="Box2">
+    <h2>Consulta de promedio</h2>
     <form>
-      <label>Pon el nombre del alumno</label>
-      <input id="name" type="text"><br>
-      <label>Calificación primer parcial</label>
-      <input type="text"><br>
-      <label>Calificación segundo parcial</label>
-      <input type="text"><br>
-      <label>Calificación tercer parcial</label>
-      <input type="text"><br>
-      <label>Calificación cuarto parcial</label>
-      <input type="text"><br>
-      <label>Calificación quinto parcial</label>
-      <input type="text"><br>
-      <input id="sendButton" type="button" value="send">
+      <label>Nombre del alumno</label>
+      <input id="nameToGet" type="text"><br>
+
+      <input id="getButton" onclick="getAverage()" type="button" value="Calcula promedio">
     </form>
   </div>
+
   <script src=practica.js></script>
 </body>
 </html>
