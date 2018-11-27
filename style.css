@@ -4,7 +4,6 @@
   box-sizing: border-box;  
 }
 
-
 html {
   background: #303133;  
 }
@@ -19,10 +18,6 @@ body {
 #mainBox {
   position: relative;
   top: 50px;
-}
-
-#Box {
-  
 }
 
 .innerBoxes {
@@ -119,10 +114,15 @@ input:hover{
 input:focus{
   outline: none;
   box-shadow: 0 0 2px #efefef;
-  border-color: transparent;
-  
+  border-color: transparent;  
 }
 
 label {
   font-size: 14px;
+}
+
+@media screen and (max-width:400px){
+  .innerBoxes{
+    width:100%;
+  }
 }
