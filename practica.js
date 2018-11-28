@@ -24,7 +24,7 @@ function getAverage() {
     if(mainStore[index].name===document.getElementById("nameToGet").value){
       let average = mainStore[index].grades.reduce((accumulator, current)=>accumulator+current)/mainStore[index].grades.length;
       if (average<7){
-        let text = document.createTextNode(`failed with ${average}`);
+        let text = document.createTextNode(`${document.getElementById("nameToGet").value} failed with ${average}`);
         let p = document.createElement("p");
         p.appendChild(text);
         let div = document.getElementById("Box2");
