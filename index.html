@@ -16,22 +16,22 @@
         <div>
           <form>
             <label class="left">Student name</label>
-            <input id="nameToLog" class="right" type="text"><br>
+            <input id="nameToLog" class="right" type="text" required><br>
 
             <label class="left">Grade 1</label>
-            <input id="gradeOne" class="right" type="number"><br>
+            <input id="gradeOne" class="right grades" type="number" max="10" min="0" required><br>
 
             <label class="left">Grade 2</label>
-            <input id="gradeTwo" class="right" type="number"><br>
+            <input id="gradeTwo" class="right grades" type="number" max="10" min="0" required><br>
 
             <label class="left">Grade 3</label>
-            <input id="gradeThree" class="right" type="number"><br>
+            <input id="gradeThree" class="right grades" type="number" max="10" min="0" required><br>
 
             <label class="left">Grade 4</label>
-            <input id="gradeFour" class="right" type="number"><br>
+            <input id="gradeFour" class="right grades" type="number" max="10" min="0" required><br>
 
             <label class="left">Grade 5</label>
-            <input id="gradeFive" class="right" type="number"><br>
+            <input id="gradeFive" class="right grades" type="number" max="10" min="0" required><br>
 
             <input id="sendButton" class="callToAction" onclick="store()" type="button" value="send">
           </form>
@@ -42,7 +42,7 @@
         <h2>Average query</h2>
         <form>
           <label class="left">Student name</label>
-          <input id="nameToGet" class="right" type="text"><br>
+          <input id="nameToGet" class="right" type="text" required><br>
 
           <input id="getButton" class="callToAction" onclick="getAverage()" type="button" value="get">
         </form>
