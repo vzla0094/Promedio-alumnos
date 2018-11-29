@@ -1,9 +1,9 @@
 let mainStore=[];
 
-function textPrinter(param,text) {
+function textPrinter(divName,textNode) {
   let p = document.createElement("p");
-  p.appendChild(text);
-  let div = document.getElementById(param);
+  p.appendChild(textNode);
+  let div = document.getElementById(divName);
   div.appendChild(p);
 }
 
@@ -12,14 +12,7 @@ function textPrinter(param,text) {
 function store(){
   mainStore.push({
     name: document.getElementById("nameToLog").value,
-    grades: 
-    [
-      parseInt(document.getElementById("gradeOne").value),
-      parseInt(document.getElementById("gradeTwo").value),
-      parseInt(document.getElementById("gradeThree").value),
-      parseInt(document.getElementById("gradeFour").value),
-      parseInt(document.getElementById("gradeFive").value)
-    ]
+    grades: [...document.getElementsByClassName("grades")].map(element=>parseInt(element.value))
   })
   let text = document.createTextNode(`${document.getElementById("nameToLog").value}'s grades logged`);
   textPrinter ("Box",text);  
@@ -38,6 +31,6 @@ function getAverage() {
         let text = document.createTextNode(`${document.getElementById("nameToGet").value} approved with ${average}`);
         textPrinter("Box2",text);
       }
-    }    
+    }
   }
 }
